@@ -1,8 +1,12 @@
 class Project
-  attr_reader :title 
+  attr_reader :title :backer
   
   def initialize(title)
-    @title=title 
+    @title=title
+    
+  end 
+  def add_backer(backer)
+    @backer=backer
   end 
 end 
 describe 'Backer - #back_project' do
