@@ -9,6 +9,7 @@ class Project
     @backer=backer
   end 
 end 
+
 describe 'Backer - #back_project' do
   it 'accepts a Project as an argument and stores it in a backed_projects array' do
     spencer = Backer.new("Spencer")
@@ -21,7 +22,6 @@ describe 'Backer - #back_project' do
     expect(spencer.backed_projects).to include(magic)
   end
 end
-
 describe 'Project - #add_backer' do
   it 'accepts a Backer as an argument and stores it in a backers array' do
     book = Project.new("Ruby, Ruby, and More Ruby")
@@ -35,13 +35,12 @@ describe 'Project - #add_backer' do
     expect(book.backers).to include(steven)
   end
 end
-
 describe 'Backer - More Advanced #back_project' do
   it 'also adds the backer to the project\'s backers array' do
     logan = Backer.new("Logan")
     hoverboard = Project.new("Awesome Hoverboard")
     logan.back_project(hoverboard)
-
+    
     # If by this point, the project knows about a new backer, where does that mean
     # some more magic needs to happen? There's really only one place it can happen.
     expect(hoverboard.backers).to include(logan)
