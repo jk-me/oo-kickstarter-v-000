@@ -1,5 +1,6 @@
-class Project 
-  def initialize(name)
-    @name=name 
+class Project
+  attr_
+  def initialize(title)
+    @title=title 
   end 
 end 
