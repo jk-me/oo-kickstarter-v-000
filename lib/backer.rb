@@ -2,9 +2,13 @@ class Backer
   attr_reader :name
   
   def initialize(name)
-    @name=name 
+    @name=name
+    @projects=[]
   end 
   
-  def 
+  def back_project(proj)
+    @projects << proj
+  end
+    
 
 end 
